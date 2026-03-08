@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    background: linear-gradient(135deg, #123, #243);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+.container {
+    background: rgba(0,0,0,0.2);
+    width: 95%;
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(5,5,5,0.3);
+}
+
+h1 {
+  letter-spacing: 2px;
+  white-space: nowrap; 
+}
+
+p {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 4px 8px;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+button {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #F59E0B;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #000;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+ul {
+  list-style: none; 
+  /* remove bullets */
+  max-height: 40vh;
+  overflow-y: auto; /* it prevents the tasks from passing the container */
+  margin-top: 15px;
+  padding-right: 15px;
+}
+
+ul::-webkit-scrollbar {
+  width: 10px;
+}
+ul::-webkit-scrollbar-thumb {
+  background: dimgray;
+  border-radius: 10px;
+}
+
+li {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+li button {
+    background: transparent;
+    background-color: #F59E0B;
+    margin-left: 16px;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 6px;
+}
+
+li span {
+  transition: 0.3s ease;
+}
+
+.completed::before {
+  content: "✓";
+  margin-right: 8px;
+  color: #F59E0B;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 40px;
+  }
+  
+  li {
+    font-size: 20px;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+    body {
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+}
+/* Desktop only - won't affect mobile */
